@@ -58,6 +58,7 @@ class Text2SemanticDataset(Dataset):
             semantic_path,
             delimiter="\t",
             encoding="utf-8",
+            header=None,  # 添加这一行：文件没有列名，防止第一行数据丢失
         )
         # get dict
         self.path2 = phoneme_path  # "%s/2-name2text.txt"%exp_dir#phoneme_path
